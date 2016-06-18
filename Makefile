@@ -13,3 +13,4 @@ app: env/requirements
 	env/bin/python run.py
 clean:
 	rm -rf env
+	rm -rf db.sqlite

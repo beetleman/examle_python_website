@@ -15,7 +15,7 @@ from app import init_app
 
 @pytest.yield_fixture()
 def app():
-    init_app(_app)
+    init_app(_app, test=True)
     with _app.app_context():
         yield _app
 
