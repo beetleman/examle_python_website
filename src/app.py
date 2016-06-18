@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+def init_app(app):
+    from views import simple_page
+    app.register_blueprint(simple_page)

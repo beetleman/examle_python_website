@@ -10,10 +10,12 @@ sys.path.append(SRC_ROOT)
 
 
 from app import app as _app
+from app import init_app
 
 
 @pytest.yield_fixture()
 def app():
+    init_app(_app)
     with _app.app_context():
         yield _app
 
