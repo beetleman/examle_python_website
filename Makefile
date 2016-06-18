@@ -8,7 +8,7 @@ env/requirements: env
 	env/bin/pip install -r requirements.txt
 	touch env/requirements
 tests: env/requirements_dev env/requirements
-	env/bin/py.test src
+	env/bin/py.test src -s
 app: env/requirements
 	env/bin/python run.py
 clean:
