@@ -14,7 +14,7 @@ class BaseModel(Model):
         database = database_proxy
 
 
-class TodoItem(Model):
+class TodoItem(BaseModel):
     text = TextField()
 
 
