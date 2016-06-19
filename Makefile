@@ -1,6 +1,7 @@
 env:
-	python3 -m venv env
-	env/bin/pip install -U pip
+	python3 -m venv --without-pip env
+	wget https://bootstrap.pypa.io/ez_setup.py -O - | env/bin/python
+	env/bin/easy_install pip
 env/requirements_dev: env
 	env/bin/pip install -r requirements_dev.txt
 	touch env/requirements_dev
